@@ -90,6 +90,7 @@ export default function Index() {
   const [activeSection, setActiveSection] = useState('home');
   const [menuOpen, setMenuOpen] = useState(false);
   const [galleryActive, setGalleryActive] = useState<number | null>(null);
+  const [allPhotosOpen, setAllPhotosOpen] = useState(false);
   const heroSection = useInView();
   const aboutSection = useInView();
   const sightsSection = useInView();
@@ -467,7 +468,10 @@ export default function Index() {
           </div>
 
           <div className="mt-8 text-center">
-            <button className="bg-krd-navy text-white font-oswald font-semibold px-8 py-4 rounded-xl uppercase tracking-wider hover:bg-krd-deep transition-colors hover:scale-105 transform">
+            <button
+              onClick={() => setAllPhotosOpen(true)}
+              className="bg-krd-navy text-white font-oswald font-semibold px-8 py-4 rounded-xl uppercase tracking-wider hover:bg-krd-deep transition-colors hover:scale-105 transform"
+            >
               <Icon name="Image" size={18} className="inline mr-2" />
               View All Photos
             </button>
@@ -495,6 +499,52 @@ export default function Index() {
           />
           <div className="absolute bottom-6 left-0 right-0 text-center text-white/60 text-sm">
             {['City Panorama', 'Red Street', 'Black Sea Coast', 'Kuban Vineyards'][galleryActive]}
+          </div>
+        </div>
+      )}
+
+      {/* ALL PHOTOS MODAL */}
+      {allPhotosOpen && (
+        <div className="fixed inset-0 z-50 bg-krd-navy/98 overflow-y-auto">
+          <div className="sticky top-0 z-10 bg-krd-navy/95 backdrop-blur-md border-b border-white/10 px-6 py-4 flex items-center justify-between">
+            <h2 className="font-oswald font-bold text-white text-2xl tracking-wider">
+              ALL <span className="text-krd-orange">PHOTOS</span>
+            </h2>
+            <button
+              onClick={() => setAllPhotosOpen(false)}
+              className="text-white bg-white/10 hover:bg-white/20 rounded-full p-2 transition-colors"
+            >
+              <Icon name="X" size={24} />
+            </button>
+          </div>
+
+          <div className="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 max-w-5xl mx-auto">
+            {[
+              { src: IMAGES.hero, title: 'City Panorama', desc: 'Krasnodar from above' },
+              { src: IMAGES.street, title: 'Red Street', desc: 'Main pedestrian artery' },
+              { src: IMAGES.sea, title: 'Black Sea Coast', desc: 'Krasnodar Krai beaches' },
+              { src: IMAGES.vineyards, title: 'Kuban Vineyards', desc: 'Golden heart of Kuban' },
+            ].map((photo, i) => (
+              <div
+                key={i}
+                className="gallery-item rounded-2xl overflow-hidden cursor-pointer shadow-xl"
+                style={{ height: '300px' }}
+                onClick={() => { setAllPhotosOpen(false); setGalleryActive(i); }}
+              >
+                <img src={photo.src} alt={photo.title} className="w-full h-full object-cover" />
+                <div className="overlay">
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <p className="font-oswald font-bold text-xl">{photo.title}</p>
+                    <p className="text-white/70 text-sm">{photo.desc}</p>
+                  </div>
+                  <div className="absolute top-4 right-4">
+                    <span className="bg-krd-orange/80 text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1">
+                      <Icon name="Expand" size={12} /> View
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       )}
