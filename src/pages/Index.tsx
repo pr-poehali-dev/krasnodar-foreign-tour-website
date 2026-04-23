@@ -9,54 +9,54 @@ const IMAGES = {
 };
 
 const NAV_ITEMS = [
-  { id: 'home', label: 'Главная' },
-  { id: 'about', label: 'О городе' },
-  { id: 'sights', label: 'Достопримечательности' },
-  { id: 'hotels', label: 'Отели' },
-  { id: 'routes', label: 'Маршруты' },
-  { id: 'gallery', label: 'Галерея' },
+  { id: 'home', label: 'Home' },
+  { id: 'about', label: 'About' },
+  { id: 'sights', label: 'Attractions' },
+  { id: 'hotels', label: 'Hotels' },
+  { id: 'routes', label: 'Routes' },
+  { id: 'gallery', label: 'Gallery' },
 ];
 
 const SIGHTS = [
-  { icon: '🏛️', name: 'Триумфальная арка', desc: 'Символ победы и мощи Кубанского казачества, главная архитектурная визитка города', tag: 'История' },
-  { icon: '🎭', name: 'Краснодарский краевой театр', desc: 'Один из старейших театров юга России с богатейшим репертуаром', tag: 'Культура' },
-  { icon: '🌿', name: 'Чистяковская роща', desc: 'Главный парк города — место для прогулок и отдыха в сердце мегаполиса', tag: 'Природа' },
-  { icon: '⚽', name: 'Стадион «Краснодар»', desc: 'Ультрасовременная арена клуба «Краснодар» — одна из лучших в России', tag: 'Спорт' },
-  { icon: '🎨', name: 'Музей Коваленко', desc: 'Старейший художественный музей Северного Кавказа с богатейшей коллекцией', tag: 'Искусство' },
-  { icon: '🛍️', name: 'Красная улица', desc: 'Главная пешеходная артерия города с кафе, магазинами и атмосферой юга', tag: 'Шоппинг' },
+  { icon: '🏛️', name: 'Triumphal Arch', desc: 'A symbol of victory and power of the Kuban Cossacks, the main architectural landmark of the city', tag: 'History' },
+  { icon: '🎭', name: 'Krasnodar Regional Theater', desc: 'One of the oldest theaters in southern Russia with a rich and diverse repertoire', tag: 'Culture' },
+  { icon: '🌿', name: 'Chistyakovsky Grove', desc: 'The main city park — a perfect place for walks and relaxation in the heart of the metropolis', tag: 'Nature' },
+  { icon: '⚽', name: 'Krasnodar Stadium', desc: 'Ultra-modern arena of FC Krasnodar — one of the finest stadiums in Russia', tag: 'Sports' },
+  { icon: '🎨', name: 'Kovalenko Museum', desc: 'The oldest art museum in the North Caucasus featuring an outstanding collection', tag: 'Art' },
+  { icon: '🛍️', name: 'Red Street', desc: 'The main pedestrian artery of the city lined with cafes, shops and southern charm', tag: 'Shopping' },
 ];
 
 const HOTELS = [
-  { name: 'Hilton Garden Inn', stars: 4, price: 'от 7 500 ₽', desc: 'Комфортный отель в деловом центре, рядом с ТЦ', img: '🏨', tag: 'Деловой' },
-  { name: 'Marriott Краснодар', stars: 5, price: 'от 12 000 ₽', desc: 'Роскошный пятизвёздочный отель с панорамным видом', img: '🌟', tag: 'Люкс' },
-  { name: 'Вилла Панорама', stars: 4, price: 'от 5 500 ₽', desc: 'Уютный бутик-отель с видом на реку Кубань', img: '🏡', tag: 'Бутик' },
-  { name: 'Ibis Краснодар Центр', stars: 3, price: 'от 3 200 ₽', desc: 'Практичный выбор в самом центре города', img: '🏩', tag: 'Бюджет' },
+  { name: 'Hilton Garden Inn', stars: 4, price: 'from $90/night', desc: 'Comfortable hotel in the business district, near shopping centers', img: '🏨', tag: 'Business' },
+  { name: 'Marriott Krasnodar', stars: 5, price: 'from $145/night', desc: 'Luxurious five-star hotel with stunning panoramic views', img: '🌟', tag: 'Luxury' },
+  { name: 'Villa Panorama', stars: 4, price: 'from $65/night', desc: 'Cozy boutique hotel overlooking the Kuban River', img: '🏡', tag: 'Boutique' },
+  { name: 'Ibis Krasnodar Center', stars: 3, price: 'from $38/night', desc: 'Smart value choice right in the city center', img: '🏩', tag: 'Budget' },
 ];
 
 const ROUTES = [
   {
-    title: 'Исторический центр',
-    duration: '3 часа',
-    distance: '4 км',
+    title: 'Historic Center',
+    duration: '3 hours',
+    distance: '4 km',
     icon: '🏛️',
     color: 'from-orange-500 to-red-500',
-    stops: ['Триумфальная арка', 'Красная улица', 'Городской сад', 'Кафедральный собор'],
+    stops: ['Triumphal Arch', 'Red Street', 'City Garden', 'Cathedral'],
   },
   {
-    title: 'Парки и природа',
-    duration: '4 часа',
-    distance: '6 км',
+    title: 'Parks & Nature',
+    duration: '4 hours',
+    distance: '6 km',
     icon: '🌿',
     color: 'from-green-500 to-emerald-600',
-    stops: ['Чистяковская роща', 'Парк «Солнечный остров»', 'Набережная Кубани', 'Ботанический сад'],
+    stops: ['Chistyakovsky Grove', 'Sunny Island Park', 'Kuban Embankment', 'Botanical Garden'],
   },
   {
-    title: 'Гастрономический тур',
-    duration: '5 часов',
-    distance: '3 км',
+    title: 'Gastronomic Tour',
+    duration: '5 hours',
+    distance: '3 km',
     icon: '🍷',
     color: 'from-amber-500 to-yellow-500',
-    stops: ['Рынок «Центральный»', 'Кубанские винодельни', 'Ресторан казачьей кухни', 'Крафтовые пивоварни'],
+    stops: ['Central Market', 'Kuban Wineries', 'Cossack Cuisine Restaurant', 'Craft Breweries'],
   },
 ];
 
@@ -125,7 +125,7 @@ export default function Index() {
         <div className="container mx-auto px-6 flex items-center justify-between h-16">
           <button onClick={() => scrollTo('home')} className="flex items-center gap-2">
             <span className="text-2xl font-oswald font-bold text-white tracking-wider">
-              КРАСНО<span className="text-krd-orange">ДАР</span>
+              KRASNO<span className="text-krd-orange">DAR</span>
             </span>
           </button>
 
@@ -177,7 +177,7 @@ export default function Index() {
         <div className="relative z-10 text-center px-6 max-w-5xl mx-auto pt-16">
           <div ref={heroSection.ref} className={heroSection.inView ? 'animate-fade-in-up' : 'opacity-0-init'}>
             <span className="inline-block bg-krd-orange/20 border border-krd-orange/40 text-krd-gold px-4 py-1.5 rounded-full text-sm font-medium tracking-widest uppercase mb-6">
-              Туристический гид
+              Travel Guide
             </span>
           </div>
 
@@ -185,13 +185,13 @@ export default function Index() {
             className={`font-oswald font-bold text-white leading-none mb-6 ${heroSection.inView ? 'animate-fade-in-up delay-100' : 'opacity-0-init'}`}
             style={{ fontSize: 'clamp(3.5rem, 10vw, 8rem)' }}
           >
-            СЕРДЦЕ<br />
-            <span className="text-krd-orange">ЮГА</span> РОСИИ
+            HEART OF<br />
+            THE <span className="text-krd-orange">SOUTH</span>
           </h1>
 
           <p className={`text-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed ${heroSection.inView ? 'animate-fade-in-up delay-200' : 'opacity-0-init'}`}>
-            Краснодар — город, где казачья история встречается с современностью,
-            а тёплый климат создаёт особую атмосферу юга
+            Krasnodar — where Cossack history meets modernity,
+            and the warm southern climate creates an atmosphere unlike any other
           </p>
 
           <div className={`flex flex-col sm:flex-row gap-4 justify-center ${heroSection.inView ? 'animate-fade-in-up delay-300' : 'opacity-0-init'}`}>
@@ -199,13 +199,13 @@ export default function Index() {
               onClick={() => scrollTo('sights')}
               className="bg-krd-orange hover:bg-orange-600 text-white font-oswald font-semibold px-8 py-4 rounded-xl text-lg tracking-wider uppercase transition-all hover:scale-105 hover:shadow-xl hover:shadow-orange-500/30"
             >
-              Исследовать город
+              Explore City
             </button>
             <button
               onClick={() => scrollTo('gallery')}
               className="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-oswald font-semibold px-8 py-4 rounded-xl text-lg tracking-wider uppercase transition-all hover:scale-105 backdrop-blur-sm"
             >
-              Смотреть галерею
+              View Gallery
             </button>
           </div>
         </div>
@@ -213,10 +213,10 @@ export default function Index() {
         <div className="absolute bottom-0 left-0 right-0 bg-krd-navy/90 backdrop-blur-md border-t border-white/10">
           <div className="container mx-auto px-6 py-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             {[
-              { num: '+1 млн', label: 'туристов в год' },
-              { num: '300+', label: 'достопримечательностей' },
-              { num: '26°C', label: 'средняя температура' },
-              { num: '1793', label: 'год основания' },
+              { num: '+1M', label: 'tourists per year' },
+              { num: '300+', label: 'attractions' },
+              { num: '26°C', label: 'avg temperature' },
+              { num: '1793', label: 'year founded' },
             ].map((stat, i) => (
               <div key={i}>
                 <div className="font-oswald text-2xl font-bold text-krd-orange">{stat.num}</div>
@@ -233,21 +233,21 @@ export default function Index() {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div ref={aboutSection.ref}>
-              <span className="text-krd-orange font-oswald font-semibold tracking-widest uppercase text-sm">О городе</span>
+              <span className="text-krd-orange font-oswald font-semibold tracking-widest uppercase text-sm">About the City</span>
               <h2 className={`font-oswald font-bold text-krd-navy text-5xl md:text-6xl mt-3 mb-6 leading-tight ${aboutSection.inView ? 'animate-fade-in-left' : 'opacity-0-init'}`}>
-                КАЗАЧЬЯ<br /><span className="text-krd-orange">СТОЛИЦА</span>
+                COSSACK<br /><span className="text-krd-orange">CAPITAL</span>
               </h2>
               <p className={`text-gray-600 text-lg leading-relaxed mb-6 ${aboutSection.inView ? 'animate-fade-in-up delay-200' : 'opacity-0-init'}`}>
-                Краснодар — крупнейший город Северного Кавказа и столица Краснодарского края.
-                Основанный в 1793 году как крепость Екатеринодар, сегодня он является
-                одним из самых динамично развивающихся городов России.
+                Krasnodar is the largest city of the North Caucasus and the capital of Krasnodar Krai.
+                Founded in 1793 as the fortress of Yekaterinodar, today it is one of
+                the most dynamically developing cities in Russia.
               </p>
               <p className={`text-gray-600 text-lg leading-relaxed mb-8 ${aboutSection.inView ? 'animate-fade-in-up delay-300' : 'opacity-0-init'}`}>
-                Благодатный климат, богатая кухня и близость к Чёрному морю делают
-                Краснодар идеальной точкой для путешествия по югу страны.
+                A blessed climate, rich cuisine and proximity to the Black Sea make
+                Krasnodar the perfect base for exploring the south of the country.
               </p>
               <div className={`flex flex-wrap gap-3 ${aboutSection.inView ? 'animate-fade-in-up delay-400' : 'opacity-0-init'}`}>
-                {['🌞 Южный климат', '🏇 Казачья культура', '🍷 Кубанское вино', '🎭 Театры и музеи'].map(tag => (
+                {['🌞 Southern Climate', '🏇 Cossack Culture', '🍷 Kuban Wine', '🎭 Theaters & Museums'].map(tag => (
                   <span key={tag} className="bg-krd-orange/10 text-krd-orange border border-krd-orange/20 px-4 py-2 rounded-full text-sm font-medium">
                     {tag}
                   </span>
@@ -257,17 +257,17 @@ export default function Index() {
 
             <div className={`grid grid-cols-2 gap-4 ${aboutSection.inView ? 'animate-scale-in delay-200' : 'opacity-0-init'}`}>
               <div className="gallery-item rounded-2xl aspect-[3/4] overflow-hidden shadow-xl">
-                <img src={IMAGES.street} alt="Красная улица" className="w-full h-full object-cover" />
+                <img src={IMAGES.street} alt="Red Street" className="w-full h-full object-cover" />
                 <div className="overlay" />
               </div>
               <div className="flex flex-col gap-4 pt-8">
                 <div className="gallery-item rounded-2xl aspect-square overflow-hidden shadow-xl">
-                  <img src={IMAGES.vineyards} alt="Виноградники" className="w-full h-full object-cover" />
+                  <img src={IMAGES.vineyards} alt="Vineyards" className="w-full h-full object-cover" />
                   <div className="overlay" />
                 </div>
                 <div className="bg-krd-navy rounded-2xl p-5 text-white flex flex-col gap-2">
-                  <span className="text-krd-gold font-oswald text-3xl font-bold">900+</span>
-                  <span className="text-white/70 text-sm">тысяч жителей</span>
+                  <span className="text-krd-gold font-oswald text-3xl font-bold">900K+</span>
+                  <span className="text-white/70 text-sm">residents</span>
                 </div>
               </div>
             </div>
@@ -279,7 +279,7 @@ export default function Index() {
       <div className="bg-krd-orange py-4 overflow-hidden">
         <div className="flex whitespace-nowrap animate-marquee">
           {Array(4).fill(null).flatMap((_, ai) =>
-            ['КРАСНОДАР', 'КУБАНЬ', 'SOUTH OF RUSSIA', 'КАЗАЧЬЯ СТОЛИЦА', 'ГОРОД СОЛНЦА', '★'].map((text, i) => (
+            ['KRASNODAR', 'KUBAN', 'SOUTH OF RUSSIA', 'COSSACK CAPITAL', 'CITY OF SUN', '★'].map((text, i) => (
               <span key={`${ai}-${i}`} className="font-oswald font-bold text-white/80 text-xl tracking-widest uppercase mx-8">
                 {text}
               </span>
@@ -292,9 +292,9 @@ export default function Index() {
       <section id="sights" className="py-24 bg-krd-light">
         <div className="container mx-auto px-6">
           <div ref={sightsSection.ref} className="text-center mb-16">
-            <span className="text-krd-orange font-oswald font-semibold tracking-widest uppercase text-sm">Куда сходить</span>
+            <span className="text-krd-orange font-oswald font-semibold tracking-widest uppercase text-sm">What to Visit</span>
             <h2 className={`font-oswald font-bold text-krd-navy text-5xl md:text-6xl mt-3 ${sightsSection.inView ? 'animate-fade-in-up' : 'opacity-0-init'}`}>
-              ДОСТОПРИМЕЧАТЕЛЬНОСТИ
+              ATTRACTIONS
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -310,7 +310,7 @@ export default function Index() {
                 <h3 className="font-oswald font-bold text-krd-navy text-xl mb-2">{sight.name}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{sight.desc}</p>
                 <button className="mt-4 text-krd-orange text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all">
-                  Подробнее <Icon name="ArrowRight" size={14} />
+                  Learn more <Icon name="ArrowRight" size={14} />
                 </button>
               </div>
             ))}
@@ -324,9 +324,9 @@ export default function Index() {
         <div className="absolute bottom-0 right-0 w-64 h-64 bg-krd-gold/10 rounded-full blur-2xl translate-x-1/2" />
         <div className="container mx-auto px-6 relative z-10">
           <div ref={hotelsSection.ref} className="text-center mb-16">
-            <span className="text-krd-gold font-oswald font-semibold tracking-widest uppercase text-sm">Где остановиться</span>
+            <span className="text-krd-gold font-oswald font-semibold tracking-widest uppercase text-sm">Where to Stay</span>
             <h2 className={`font-oswald font-bold text-white text-5xl md:text-6xl mt-3 ${hotelsSection.inView ? 'animate-fade-in-up' : 'opacity-0-init'}`}>
-              ЛУЧШИЕ <span className="text-krd-orange">ОТЕЛИ</span>
+              TOP <span className="text-krd-orange">HOTELS</span>
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -343,7 +343,7 @@ export default function Index() {
                 <div className="border-t border-white/10 pt-4 flex items-center justify-between">
                   <span className="text-krd-gold font-oswald font-bold text-lg">{hotel.price}</span>
                   <button className="bg-krd-orange hover:bg-orange-600 text-white text-xs font-semibold px-3 py-2 rounded-lg transition-colors">
-                    Забронировать
+                    Book Now
                   </button>
                 </div>
               </div>
@@ -356,12 +356,12 @@ export default function Index() {
       <section id="routes" className="py-24 bg-white">
         <div className="container mx-auto px-6">
           <div ref={routesSection.ref} className="text-center mb-16">
-            <span className="text-krd-orange font-oswald font-semibold tracking-widest uppercase text-sm">Как гулять</span>
+            <span className="text-krd-orange font-oswald font-semibold tracking-widest uppercase text-sm">How to Explore</span>
             <h2 className={`font-oswald font-bold text-krd-navy text-5xl md:text-6xl mt-3 ${routesSection.inView ? 'animate-fade-in-up' : 'opacity-0-init'}`}>
-              МАРШРУТЫ
+              ROUTES
             </h2>
             <p className={`text-gray-500 mt-4 max-w-xl mx-auto ${routesSection.inView ? 'animate-fade-in-up delay-200' : 'opacity-0-init'}`}>
-              Готовые маршруты по Краснодару и окрестностям — от исторического центра до винодельческих регионов
+              Ready-made routes around Krasnodar and surroundings — from the historic center to wine country
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -383,7 +383,7 @@ export default function Index() {
                   </div>
                 </div>
                 <div className="bg-white p-6">
-                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Остановки маршрута</p>
+                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Route stops</p>
                   <ul className="space-y-2">
                     {route.stops.map((stop, j) => (
                       <li key={j} className="flex items-center gap-3 text-gray-600 text-sm">
@@ -393,7 +393,7 @@ export default function Index() {
                     ))}
                   </ul>
                   <button className="mt-5 w-full bg-krd-navy hover:bg-krd-deep text-white font-oswald font-semibold py-3 rounded-xl text-sm tracking-wider uppercase transition-colors">
-                    Начать маршрут
+                    Start Route
                   </button>
                 </div>
               </div>
@@ -406,12 +406,12 @@ export default function Index() {
       <section id="gallery" className="py-24 bg-krd-light">
         <div className="container mx-auto px-6">
           <div ref={gallerySection.ref} className="text-center mb-16">
-            <span className="text-krd-orange font-oswald font-semibold tracking-widest uppercase text-sm">Визуальный мир</span>
+            <span className="text-krd-orange font-oswald font-semibold tracking-widest uppercase text-sm">Visual World</span>
             <h2 className={`font-oswald font-bold text-krd-navy text-5xl md:text-6xl mt-3 ${gallerySection.inView ? 'animate-fade-in-up' : 'opacity-0-init'}`}>
-              ГАЛЕРЕЯ
+              GALLERY
             </h2>
             <p className={`text-gray-500 mt-4 max-w-xl mx-auto ${gallerySection.inView ? 'animate-fade-in-up delay-200' : 'opacity-0-init'}`}>
-              Краснодар и его окрестности глазами туристов
+              Krasnodar and its surroundings through the eyes of travelers
             </p>
           </div>
 
@@ -420,11 +420,11 @@ export default function Index() {
               className="gallery-item rounded-2xl overflow-hidden cursor-pointer shadow-lg col-span-2 row-span-2"
               onClick={() => setGalleryActive(0)}
             >
-              <img src={IMAGES.hero} alt="Панорама" className="w-full h-full object-cover" />
+              <img src={IMAGES.hero} alt="City Panorama" className="w-full h-full object-cover" />
               <div className="overlay">
                 <div className="absolute bottom-4 left-4 text-white">
-                  <p className="font-oswald font-bold text-xl">Панорама города</p>
-                  <p className="text-white/70 text-sm">Краснодар с высоты</p>
+                  <p className="font-oswald font-bold text-xl">City Panorama</p>
+                  <p className="text-white/70 text-sm">Krasnodar from above</p>
                 </div>
               </div>
             </div>
@@ -433,10 +433,10 @@ export default function Index() {
               className="gallery-item rounded-2xl overflow-hidden cursor-pointer shadow-lg"
               onClick={() => setGalleryActive(1)}
             >
-              <img src={IMAGES.street} alt="Красная улица" className="w-full h-full object-cover" />
+              <img src={IMAGES.street} alt="Red Street" className="w-full h-full object-cover" />
               <div className="overlay">
                 <div className="absolute bottom-3 left-3 text-white">
-                  <p className="font-oswald font-bold">Красная улица</p>
+                  <p className="font-oswald font-bold">Red Street</p>
                 </div>
               </div>
             </div>
@@ -445,10 +445,10 @@ export default function Index() {
               className="gallery-item rounded-2xl overflow-hidden cursor-pointer shadow-lg"
               onClick={() => setGalleryActive(2)}
             >
-              <img src={IMAGES.sea} alt="Черное море" className="w-full h-full object-cover" />
+              <img src={IMAGES.sea} alt="Black Sea" className="w-full h-full object-cover" />
               <div className="overlay">
                 <div className="absolute bottom-3 left-3 text-white">
-                  <p className="font-oswald font-bold">Черноморье</p>
+                  <p className="font-oswald font-bold">Black Sea Coast</p>
                 </div>
               </div>
             </div>
@@ -457,10 +457,10 @@ export default function Index() {
               className="gallery-item rounded-2xl overflow-hidden col-span-2 cursor-pointer shadow-lg"
               onClick={() => setGalleryActive(3)}
             >
-              <img src={IMAGES.vineyards} alt="Виноградники" className="w-full h-full object-cover" />
+              <img src={IMAGES.vineyards} alt="Vineyards" className="w-full h-full object-cover" />
               <div className="overlay">
                 <div className="absolute bottom-4 left-4 text-white">
-                  <p className="font-oswald font-bold text-xl">Кубанские виноградники</p>
+                  <p className="font-oswald font-bold text-xl">Kuban Vineyards</p>
                 </div>
               </div>
             </div>
@@ -469,7 +469,7 @@ export default function Index() {
           <div className="mt-8 text-center">
             <button className="bg-krd-navy text-white font-oswald font-semibold px-8 py-4 rounded-xl uppercase tracking-wider hover:bg-krd-deep transition-colors hover:scale-105 transform">
               <Icon name="Image" size={18} className="inline mr-2" />
-              Смотреть все фото
+              View All Photos
             </button>
           </div>
         </div>
@@ -494,7 +494,7 @@ export default function Index() {
             onClick={e => e.stopPropagation()}
           />
           <div className="absolute bottom-6 left-0 right-0 text-center text-white/60 text-sm">
-            {['Панорама города', 'Красная улица', 'Черноморское побережье', 'Кубанские виноградники'][galleryActive]}
+            {['City Panorama', 'Red Street', 'Black Sea Coast', 'Kuban Vineyards'][galleryActive]}
           </div>
         </div>
       )}
@@ -508,16 +508,16 @@ export default function Index() {
         <div className="absolute inset-0 bg-krd-navy/80" />
         <div className="relative z-10 container mx-auto px-6 text-center">
           <h2 className="font-oswald font-bold text-white text-5xl md:text-7xl mb-6">
-            ПЛАНИРУЙ<br /><span className="text-krd-orange">ПОЕЗДКУ</span>
+            PLAN YOUR<br /><span className="text-krd-orange">TRIP</span>
           </h2>
           <p className="text-white/70 text-xl mb-10 max-w-xl mx-auto">
-            Лучшее время для визита — с мая по октябрь. Забронируй отель заранее!
+            Best time to visit — May through October. Book your hotel in advance!
           </p>
           <button
             onClick={() => scrollTo('hotels')}
             className="bg-krd-orange hover:bg-orange-600 text-white font-oswald font-bold px-12 py-5 rounded-2xl text-xl tracking-wider uppercase transition-all hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/40"
           >
-            Выбрать отель
+            Choose a Hotel
           </button>
         </div>
       </section>
@@ -528,14 +528,14 @@ export default function Index() {
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
               <h3 className="font-oswald font-bold text-white text-2xl mb-3">
-                КРАСНО<span className="text-krd-orange">ДАР</span>
+                KRASNO<span className="text-krd-orange">DAR</span>
               </h3>
               <p className="text-white/50 text-sm leading-relaxed">
-                Туристический гид по Краснодарскому краю. Откройте для себя сердце юга России.
+                Travel guide to Krasnodar Krai. Discover the heart of southern Russia.
               </p>
             </div>
             <div>
-              <h4 className="font-oswald font-semibold text-white uppercase tracking-wider text-sm mb-3">Разделы</h4>
+              <h4 className="font-oswald font-semibold text-white uppercase tracking-wider text-sm mb-3">Sections</h4>
               <ul className="space-y-2">
                 {NAV_ITEMS.map(item => (
                   <li key={item.id}>
@@ -550,16 +550,16 @@ export default function Index() {
               </ul>
             </div>
             <div>
-              <h4 className="font-oswald font-semibold text-white uppercase tracking-wider text-sm mb-3">Контакты</h4>
+              <h4 className="font-oswald font-semibold text-white uppercase tracking-wider text-sm mb-3">Contact</h4>
               <div className="space-y-2 text-white/50 text-sm">
-                <p className="flex items-center gap-2"><Icon name="MapPin" size={14} />г. Краснодар, ул. Красная</p>
-                <p className="flex items-center gap-2"><Icon name="Mail" size={14} />info@visitkrasnodar.ru</p>
+                <p className="flex items-center gap-2"><Icon name="MapPin" size={14} />Krasnodar, Red Street</p>
+                <p className="flex items-center gap-2"><Icon name="Mail" size={14} />info@visitkrasnodar.com</p>
                 <p className="flex items-center gap-2"><Icon name="Phone" size={14} />+7 (861) 200-00-00</p>
               </div>
             </div>
           </div>
           <div className="border-t border-white/10 pt-6 text-center text-white/30 text-xs">
-            © 2024 Краснодар — туристический гид. Все права защищены.
+            © 2024 Krasnodar Travel Guide. All rights reserved.
           </div>
         </div>
       </footer>
